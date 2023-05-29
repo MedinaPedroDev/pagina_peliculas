@@ -1,0 +1,418 @@
+/* medidas generales */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:   Arial, Helvetica, sans-serif;
+}
+/*Para la barra de scroll */
+body::-webkit-scrollbar{
+    width: 7px;
+    background-color: rgb(19, 19, 19);
+}
+body::-webkit-scrollbar-thumb{
+    background-color:rgba(180, 12, 12, 0.728) ;
+}
+html{
+    width: 100%;
+}
+/* Header */
+.header_inicio {
+    width: 100%;
+    background-color: rgb(9, 9, 9);
+    display: flex;
+    color:rgb(255, 255, 255);
+    align-items: center;
+    justify-content: space-between;
+    padding:0 10px ;
+    
+}
+/* Logo */
+.logo_inicio{
+    height: 60px;
+    width: 18%;
+    min-width: 200px;
+    cursor: pointer;
+}
+/* icono del menu que desaparece cuando la pagina esta completa */
+.menu{
+    display: none;
+    cursor: pointer;
+    margin: 0 15px;
+    width: 60px;
+}
+/* Toda el nav */
+.container_nav {
+    display: flex;
+    height: 80px;
+    align-items: center;
+    width: 80%;
+    justify-content: space-evenly;
+}
+/* Primer Container de los links principales */
+.container_links{
+    width: 40%;
+    height: 100%;
+}
+.menu_links{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+}
+.menu_links li{
+    font-size: 22px;
+    font-weight: 700;
+    height: 100%;
+    width: max-content;
+    text-transform: capitalize; 
+}
+.icono{
+    margin-bottom: 3px;
+    margin-right: 10px;
+}
+/* Segundo Container de la barra de busquedad */
+.container_serch{
+    display: flex;
+    width: 35%;
+}
+.barra_busqueda{
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    width: 100%;
+    min-width: 150px;
+    height: 35px;
+    border-radius: 9px;
+}
+.buscar{
+    outline: none;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    height: 35px;
+    width: 90%;
+    border-left: rgb(19, 19, 19) 1px solid;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0 10px 0 10px;
+}
+.boton_buscar{
+    cursor: pointer;
+    border: none;
+    border-right: rgb(19, 19, 19) 1px solid;
+    border-radius: 8px;
+    height: 35px;
+    width: 50px;
+    background-color: rgb(205, 205, 205);
+}
+.boton_buscar:active{
+    background-color: rgb(200, 0, 0);
+}
+/* Tercer container del perfil */
+.container_perfil{
+    width: 18%;
+    height: 100%;
+}
+.container_perfil ul{
+    width: 100%;
+}
+
+.arrow_perfil{
+    width: 40px;
+}
+/* Medidas para los sub menu y los links */
+.menu_principal{
+    position: relative;
+    height: 100%;
+    --clip:polygon(0 0, 100% 0, 100% 0, 0 0);
+    --transform: rotate(-90deg);
+    text-transform: capitalize; 
+}
+.container_perfil .menu_principal {
+    width: 80%;
+}
+.menu_principal:hover{
+    --clip:polygon(0 0, 100% 0, 100% 100%, 0% 100%); 
+    --transform: rotate(-0);
+}
+.sub_menu{
+    position: absolute;
+    background-color: rgb(39, 39, 39);
+    width: max-content;
+    padding: 10px 25px;
+    clip-path: var(--clip);
+    transition: clip-path .3s;
+    overflow: hidden;
+}
+.sub_menu a{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(184, 179, 179);
+    transition: 0.2s ease;
+    text-transform: capitalize; 
+}
+.sub_menu li{
+    width: 100%;
+    margin-top: 8px;
+    transition: 0.3s ease;
+}
+.sub_menu a:hover{
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.sub_menu a:active{
+    color: rgb(200, 0, 0);
+}
+.sub_menu li:hover a,.sub_menu li:hover {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+.sub_menu li:active a,.sub_menu li:active {
+    color: rgb(200, 0, 0);
+}
+ul{
+    list-style: none;
+}
+.link{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.link:hover{
+    background-color: rgba(180, 12, 12, 0.124);
+}
+.link_active:active{
+    color: rgba(180, 12, 12, 0.479);
+}
+.perfil{
+    width: 60px;
+}
+.menu__arrow{
+    transform: var(--transform);
+    transition: transform .3s;
+    display: block;
+    margin-left: 3px;
+}
+/*hero*/
+.hero{
+    width: 100%;
+    height: 85vh;
+    background: -webkit-linear-gradient(to right, rgba(0,0,0,0.5),rgba(0,0,0,0.5)); 
+    background: linear-gradient(to right, rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../assets/fondo/Peliculas_2.jpg); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+    overflow: hidden;
+}
+.hero h1{
+    font-size: 6rem;
+    font-weight: 900;
+}
+.hero p{
+    font-size: 25px;
+    font-weight: 500;
+    margin-top: 3px;
+}
+/*Buscador*/
+.buscador{
+    position:absolute;
+    width: 100%;
+    min-height:100% ;
+    max-height: max-content;
+    background: rgb(0, 0, 0);
+    top: 80px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 10px;
+    --clip:polygon(100% 0, 100% 1%, 100% 100%, 100% 100%);
+    clip-path: var(--clip);
+    transition: clip-path .2s;
+}
+.show{
+    --clip:polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.contenedor_buscador{
+    min-height:80% ;
+    max-height: max-content;
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.contenedor_buscador .pelicula_estreno{
+    height: 300px;
+    width: 300px;
+    margin: 5px 8px;
+}
+.contenedor_buscador .caraptula{
+    height: 250px; 
+}
+.close_buscador{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    cursor: pointer;
+}
+.eliminar{
+    display: none;
+}
+/*menu desplegable*/
+.menu_desplegable{
+    display: none;
+}
+.menu_links_desplegable .link{
+    margin: 5px 0;
+    height: 50px;
+}
+/*Para ser responsi */
+@media (max-width:1050px){
+    .menu_links li{
+        font-size: 19px;
+    }
+    .icono{
+        margin-right: 5px;
+    }
+    .container_nav{
+        width: 82%;
+    }
+    .container_serch{
+        margin-left: 30px;
+    }
+    .hero p{
+        font-size: 23px;
+    }
+
+}
+@media (max-width:900px){
+    .logo_inicio{
+        width: 100px;
+    }
+    .container_links{
+        display: none;
+    }
+    .container_perfil{
+        display: none;
+    }
+    .menu{
+        display: block;
+    }
+    .container_serch{
+        width: 95%;
+        justify-content: flex-start;
+    }
+    .buscar{
+        width: 95%;
+    }
+    .container_perfil{
+        margin-right: 50px;
+    }
+    .container_perfil .sub_menu{
+        width: 110px;
+    }
+    .container_perfil .menu_principal{
+        width: 100px;
+    }
+    /*Menu desplegable */
+    .menu_desplegable{
+        display: block;
+        --clip:polygon(0 0, 0 0, 0 100%, 0% 100%);
+        clip-path: var(--clip);
+        top:0;
+        position: fixed;
+        background-color: rgb(31, 31, 31);
+        width: 70%;
+        height: 100%;
+        padding: 10px 0 0 10px; 
+        transition: clip-path .2s;
+        overflow-y: auto;
+        
+    }
+    .menu_desplegable::-webkit-scrollbar{
+        width: 7px;
+        background-color: rgb(19, 19, 19);
+    }
+    .menu_desplegable::-webkit-scrollbar-thumb{
+        background-color:rgba(180, 12, 12, 0.728) ;
+    }
+    .menu_desplegado{
+        --clip:polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: var(--clip);
+        transition: clip-path .2s;
+    }
+    .menu__item{
+        overflow: hidden;
+        --clip:0;
+    }
+    .menu_desplegable .menu__arrow{
+        margin-left: auto;
+        margin-right: 20px;
+    }
+    
+    .menu_links_desplegable{
+        background-color: rgb(31, 31, 31);
+        width: 90%;
+        padding: 10px 0 0 10px;
+        display: flex;
+        flex-direction: column;
+        font-size: 22px;
+        font-weight: 700;
+        color: rgb(255, 255, 255); 
+        overflow-y: auto;
+    }
+    .menu_active{
+        --transform: rotate(-0);
+        --background: rgba(180, 12, 12, 0.479);
+    }
+    .menu_desplegable .menu_principal{
+        background-color: var(--background) ;
+    }
+    .menu_desplegable .sub_menu{
+        display: grid;
+        position: unset;
+        width: 100%;
+        border-left: 1px solid rgb(216, 216, 216) ;
+        height: 0px;
+        padding: 0 25px;
+        transition: height .3s;
+    } 
+    .menu_desplegable .sub_menu{
+        display: grid;
+        position: unset;
+        width: 100%;
+        border-left: 1px solid rgb(216, 216, 216) ;
+        height: 0px;
+        padding: 0 25px;
+        transition: height .3s;
+    } 
+}
+@media (max-width:600px){
+    .container_serch{
+        width: 100%;
+    }
+    .container_nav{
+        overflow: hidden;
+    }
+    .hero h1{
+        font-size: 4rem;
+    }
+    .hero p{
+        font-size: 18px;
+    font-weight: 700;
+    }
+}

@@ -1,0 +1,135 @@
+/* Contenedor principal */
+.container_lista{
+    width: 98%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 25px;
+}
+/* La seccion del usuario en donde esta su nombre y sus peliculas */
+.lista_usuario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 45vh;
+    border-right: 3px solid rgb(255, 255, 255);
+    position:fixed;
+    bottom: 3px;
+    overflow: hidden;
+    top: 135px;
+}
+.icono_usuario_lista{
+    width: 180px;
+    margin-bottom: 5px;
+}
+.nombre_usuario{
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.titulo_peliculas_favoritas{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.cantidad_peliculas_favoritas{
+    font-size: 20px;
+    font-weight: 500;
+}
+/* Seccion en donde se muestran todas las peliuclas marcadas como favoritas por el usuario */
+.lista_peliculas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 70vh;
+    width: 75%;
+    margin-left: 300px;
+}
+.peliculas_lista{
+    display: flex;
+    align-items: center;
+    width: 100%; 
+    height: 150px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    border-top: 2px solid rgb(255, 255, 255);;
+    cursor: pointer;
+    overflow: hidden;
+}
+.identificador{
+    font-size: 20px;
+    font-weight: 800;
+    margin: 0 10px 0 5px;
+    text-align: center;
+    width: 40px;
+    overflow: hidden;
+}
+.img_lista{
+    width: 180px;
+    height: 90%;
+    overflow: hidden;
+}
+.list_informacion{
+    width: 78%;
+    height: 90%;
+    padding: 10px 10px 5px 15px;
+}
+.title_list{
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 3px;
+}
+.duracion_list, .fecha_list{
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+.icono_list{
+    width: 30px;
+    cursor: pointer;
+}
+.container_lista .icono_favorito{
+    position: static;
+    background-color: rgb(54, 54, 54);
+    width: 40px;
+    height: 40px;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+.container_lista .icono_favorito:hover{
+    background-color: rgba(180, 12, 12, 0.845);
+}
+.container_lista .favorito_activado{
+    display: flex;
+    width: 35px;
+}
+.eliminar{
+    display: none;
+}
+/* Medidas para ser responsi */
+@media (max-width:900px){
+    .container_lista{
+        flex-direction: column;
+    }
+    .lista_usuario{
+        border-right: 0px solid rgb(255, 255, 255);
+        position:static;
+        display: flex;
+        top: 0px;
+        margin-bottom: 20px;
+        
+    }
+    .lista_peliculas{
+        margin-left: 0px;
+        width: 100%;
+    
+    }
+}

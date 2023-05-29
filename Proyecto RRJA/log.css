@@ -1,0 +1,154 @@
+
+body{
+    background-color: black;
+    color: white;
+}
+
+div{position: relative;}
+
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1{
+    background-color: black;
+    font-size: 220px;
+    text-align: center;
+    font-weight: 400;
+    mix-blend-mode: multiply;
+}
+
+
+.btn-neon{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: white;
+    letter-spacing: 4px;
+    font-size: 24px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.2s;
+    left: 600px;
+    background: rgba(7, 82, 244, 0.658);
+    border-radius: 50px;
+}
+
+.btn-neon:hover{
+    background: turquoise;
+    box-shadow: 0 0 10px turquoise, 0 0 40px turquoise, 0 0 80px turquoise;
+    transition-delay: 0.1s;
+}
+
+.btn-neon span{
+    position: absolute;
+    display: block;
+}
+
+.login{
+border: 4px solid white;
+width: 400px;
+position: absolute;
+top: 1500px;
+bottom: 0px;
+left: 550px;
+right: 0px;
+height: 300px;
+text-align: center;
+font-weight: 200;
+background: #373B44;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+border-radius: 10px;
+}
+
+
+.logo{
+    width: 150px;
+    border-radius: 75px;
+}
+
+.ingresar{
+    border: 4px solid cyan;
+    color: black
+}
+
+.articulo1{
+    border: 12px solid gray;
+    position: absolute;
+    top: 2000px;
+    width: 1350px;
+    height: 400px;
+    text-align: center;
+    align-items: center;
+}
+.imagen1{
+    width: 300px;
+}
+.articulo2{
+    border: 12px solid gray;
+    position: absolute;
+    top: 2440px;
+    width: 1350px;
+    height: 400px;
+    text-align: center;
+    align-items: center;
+}
+.imagen2{
+    width: 400px;
+}
+h2{
+    font-size: xx-large;
+}
+.imagen3{
+position: absolute;
+top: 2900px;
+width: 1400px;
+
+align-items: center;
+}
+
+::-webkit-scrollbar{
+    width: 13px;
+}
+::-webkit-scrollbar-thumb{
+    background: rgb(0, 157, 255);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: rgb(17, 0, 255);
+}
+
+::-webkit-scrollbar-thumb:active{
+    background: #373B44;
+}
+::-webkit-scrollbar-track{
+    background: white;
+}
+::-webkit-scrollbar-track:hover{
+    background: #647ea9;
+}
+footer{
+    border: 2px solid grey;
+    background-color: black;
+    position: absolute;
+    top: 3500px;
+    left: 0;
+    width: 1405px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.imagen4{
+    width: 500px;
+}
+
+
+

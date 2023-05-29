@@ -1,0 +1,69 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+/* Contenedor principal */
+.container_categorias{
+    width: 95%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+/* El titulo de la categoria que se esta viendo */
+.title_genero_peliculas{
+    font-size: 3em;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.icono_genero_pelicula{
+    width: 50px;
+}
+/* El container en donde se encuentran las peliculas */
+.container_pelicula_categoria{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+/* Modificacion especial para las peliculas */
+.container_categorias .pelicula_estreno{
+    margin: 10px 10px;
+    height: 400px;
+    width: 280px;
+}
+.container_categorias .caraptula{
+    width: 91%;
+    height: 300px; 
+}
+.titulo_pelicula{
+    font-size: 19px;
+    font-weight: 700;
+    height: 60px;
+}
+
+/*E icono de favorito */
+.container_categorias .icono_favorito{
+    margin-left: 13.8rem;
+    margin-top: 13rem;
+}
+/* medidas para ser responsi */
+@media (max-width: 1000px){
+    .container_categorias .pelicula_estreno{
+        
+        width: 350px;
+    }
+    .container_categorias .icono_favorito{
+        margin-left: 18rem;
+        margin-top: 13rem;
+        
+    }
+}

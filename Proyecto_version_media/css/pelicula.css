@@ -1,0 +1,105 @@
+/* container principal */
+.container_reproductor_peliculas{
+    width: 95%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 0 20px 30px 40px;
+    overflow: hidden;
+}
+/* El titulo de la pelicula */
+.titulo_reproductor_peliculas{
+    font-size: 3em;
+    font-weight: 800;
+    margin: 10px 0;
+    text-align: center;
+}
+/* Seccion donde esta la pelicula */
+.container_pelicula{
+    display: flex;
+    width: 100%;
+}
+.container_pelicula section{
+    width: 60%;
+
+}
+.portada_pelicula{
+    margin-right: 20px;
+    width: 40%;
+    height: 600px;
+    overflow: hidden;
+}
+.subtitulos_pelicula{
+    font-size: 25px;
+    font-weight: 700;
+    color: rgb(200, 0, 0);
+    margin: 10px 0;
+}
+.texto_pelicula{
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    margin: 10px 5px;
+    width: 100%;
+}
+/* La seccion del video */
+.container_video{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+.reproductor_video{
+    width: 80%;
+    height: 80vh;
+    background-color: rgb(18, 18, 18);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+video{
+    width: 95%;
+    height: 90%;
+    object-fit: cover
+}
+.container_reproductor_peliculas .icono_favorito{
+    position: static;
+    background-color: rgb(54, 54, 54);
+    width: 40px;
+    height: 40px;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+/*E icono de favorito */
+.container_reproductor_peliculas .icono_favorito:hover{
+    background-color: rgba(180, 12, 12, 0.845);
+}
+.favorito_desactivado{
+    width: 35px;
+} 
+.favorito_activado{
+    width: 35px;
+}
+/* Para ser responsi */
+@media (max-width:900px){
+    .container_pelicula{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .portada_pelicula{
+        width: 90%;
+    }
+    .reproductor_video{
+        width: 100%;
+    }
+    .container_pelicula section{
+        width: 100%;
+    }
+}
